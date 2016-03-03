@@ -54,8 +54,8 @@ namespace Clustering {
 
         LNodePtr current = rtSide.__points;
         while (current != nullptr) {
-            for (int count = 0; count < rtSide.__size; ++count) {
-                add(rtSide[count]);
+            for (int i = 0; i < rtSide.__size; ++i) {
+                add(rtSide[i]);
             }
             current = current->next;
             return *this;
@@ -252,5 +252,3 @@ namespace Clustering {
         return c;
     }
 }
-
-
