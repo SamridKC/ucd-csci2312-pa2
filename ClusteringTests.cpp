@@ -7,6 +7,7 @@
 #include <cassert>
 #include <iomanip>
 #include <fstream>
+#include <limits>
 
 #include "ClusteringTests.h"
 #include "Point.h"
@@ -140,8 +141,8 @@ void test_point_getsetelem(ErrorContext &ec, unsigned int numRuns) {
             pass = true;
             for (int i = 0; i < 50; i ++) {
                 pass = pass &&
-                        (p.getValue(i) == 0.0) &&
-                        (p[i] == 0.0);
+                       (p.getValue(i) == 0.0) &&
+                       (p[i] == 0.0);
             }
             ec.result(pass);
         }
@@ -159,8 +160,8 @@ void test_point_getsetelem(ErrorContext &ec, unsigned int numRuns) {
             pass = true;
             for (int i = 0; i < 20; i ++)
                 pass = pass &&
-                        (p.getValue(i) == (13.43 * i * i + 4.567 * i + 1.234567)) &&
-                        (p[i] == (13.43 * i * i + 4.567 * i + 1.234567));
+                       (p.getValue(i) == (13.43 * i * i + 4.567 * i + 1.234567)) &&
+                       (p[i] == (13.43 * i * i + 4.567 * i + 1.234567));
             ec.result(pass);
         }
 
